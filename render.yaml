@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: synapic
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: MAX_UPLOAD_MB
+        value: "15"
+      - key: OCR_DPI
+        value: "300"
+      - key: TRANSLATION_PROVIDER
+        value: google
