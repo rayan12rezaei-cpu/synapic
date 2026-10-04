@@ -7,5 +7,9 @@ __pycache__
 .env
 storage/*
 !storage/.gitkeep
-README.md
+COPY .env.example ./
+ERROR: ... "/.env.example": not found
+
+COPY README.md ./
+ERROR: ... "/README.md": not found
 source_files
