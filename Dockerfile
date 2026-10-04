@@ -31,9 +31,6 @@ COPY templates ./templates
 COPY static ./static
 COPY assets ./assets
 COPY storage ./storage
-COPY .env.example ./
-COPY README.md ./
-COPY render.yaml ./
 
 RUN useradd --create-home --shell /usr/sbin/nologin synapic \
     && chown -R synapic:synapic /app
